@@ -1,0 +1,14 @@
+<section class="menu-container ">
+  <div
+    class="menu"
+    [class.active]="activeIndex == item.id"
+    *ngFor="let item of menus"
+  >
+    <mat-card class="mat-card" (click)="activateTab(item.id)">
+      <div class="menu-icon">
+        <img [src]="item.Image" [alt]="item.name" />
+      </div>
+      <div class="menu-text">{{ item.name }}</div>
+    </mat-card>
+  </div>
+</section>

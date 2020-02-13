@@ -1,0 +1,101 @@
+<mat-card class="mat-card ">
+  <div class="card-header">
+    <div class="card-title">Service Requests</div>
+    <span class="spacer"></span>
+    <div class="card-search ">
+      <input
+        type="text"
+        placeholder="Search"
+        name="search"
+        class="search-box"
+      />
+      <button type="button" class="search-button">
+        <img src="assets/images/search.svg" alt="Search" class="search-icon" />
+      </button>
+    </div>
+
+    <div class="card-request-button">
+      <button color="accent" class="mat-stroked-button" mat-stroked-button>
+        <img
+          src="assets/images/service_request_icon-secondary .svg"
+          alt="Service Request icon"
+          class="new-reqicon"
+        />NewRequest
+      </button>
+    </div>
+  </div>
+  <!--we are want to make Responsive for all Device -->
+<div class="tableContainer">
+  <mat-table
+    [dataSource]="dataSource"
+    matSort
+  >
+    <!-- Requested by -->
+    <ng-container
+      matColumnDef="requestedBy"
+      class="mat-header-row mat-sort-header-container"
+    >
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        class="mat-header-cell mat-sort-header-button"
+        mat-sort-header
+      >
+        Requested By
+      </th>
+      <td mat-cell *matCellDef="let element" class="mat-cell ">
+        <img
+          [src]="element.requestedBy.image"
+          [alt]="element.requestedBy.name"
+          class="userProfile"
+        />
+        {{ element.requestedBy.name }}
+      </td>
+    </ng-container>
+
+    <!-- What date it will happen -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header  >Requested On</th>
+      <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+    </ng-container>
+
+    <!-- it will assined which person -->
+    <ng-container matColumnDef="assignedTo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Assined To</th>
+      <td mat-cell *matCellDef="let element">
+        <img
+          [src]="element.assignedTo.image"
+          [alt]="element.assignedTo.name"
+          class="userProfile"
+        />
+        {{ element.assignedTo.name }}
+      </td>
+    </ng-container>
+
+    <!-- what is the status of the  -->
+    <ng-container matColumnDef="live">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+
+      <td mat-cell *matCellDef="let element">
+        <div
+          class="status-label"
+          [ngClass]="{
+            progress: element.live == 'progress',
+            inprogress: element.live == 'inprogress',
+            waiting: element.live == 'waiting',
+            NewRequest: element.live == 'NewRequest',
+            cancelled: element.live == 'cancelled'
+          }"
+        >
+          {{ element.live }}
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </mat-table>
+  </div>
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</mat-card>

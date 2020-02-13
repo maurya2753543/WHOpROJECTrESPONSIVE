@@ -1,0 +1,133 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mat-toolbar {
+  background: #0095d2;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+  width: 100%;
+}
+.mat-toolbar-multiple-row {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  min-width: 64px;
+}
+.logo {
+  width: 72px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  margin-right: 16px;
+  padding-right: 16px;
+}
+.nav-button {
+  font-size: 13px;
+  margin-right: 10px;
+  font-weight: 400;
+}
+.profile-icon {
+  width: 43px;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+.header-title {
+  font-size: 20px;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  color: white;
+}
+.mat-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+}
+.spacer {
+  flex: 1 1 auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+.sidenav{
+  color: white;
+}
+.navbar-brand {
+  width: 200px;
+}
+
+.logo img {
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0;
+}
+.mat-icon {
+  margin-right: 5px;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+      width: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidenav {
+    display: none;
+
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .nav-button{
+    display: none;
+  }
+  .service-icon {
+    filter: invert(45%) sepia(8%) saturate(7%) hue-rotate(339deg) brightness(98%) contrast(85%);
+
+  }
+  .notification-bar{
+    display: none;
+  }
+
+  .profile-icon {
+    display: none;
+  }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .header-title {
+     font-size: 14px;
+  }
+  .notification {
+    padding-left: 16px;
+    color: #696969;
+
+  }
+  .noti-lable{
+    margin: 16px;
+  }
+
+
+}

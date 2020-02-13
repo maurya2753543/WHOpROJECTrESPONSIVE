@@ -1,0 +1,31 @@
+<section class="header-graphs">
+  <div class="graph-row">
+    <div class="column info">
+      <app-reports> </app-reports>
+    </div>
+
+    <div class="column status">
+      <app-request></app-request>
+    </div>
+
+    <div class="column request">
+      <app-active-request> </app-active-request>
+    </div>
+  </div>
+  <app-manu></app-manu>
+</section>
+<section class="content-row">
+  <div class="content-column request-table">
+    <app-service-request></app-service-request>
+  </div>
+
+  <div class="content-column request-status">
+    <app-status-wise></app-status-wise>
+  </div>
+  <div class="content-column upcoming-task">
+    <app-upcoming-task></app-upcoming-task>
+  </div>
+  <div class="content-column upcoming-due-days">
+    <app-due-datewise></app-due-datewise>
+  </div>
+</section>

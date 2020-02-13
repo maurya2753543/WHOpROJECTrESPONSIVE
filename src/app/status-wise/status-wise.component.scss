@@ -1,0 +1,171 @@
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: Montserrat, sans-serif;
+}
+.data-container {
+  padding: 8px;
+}
+
+section {
+  display: block;
+}
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mat-color {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+}
+.title {
+  font-size: 18px;
+}
+
+.mat-card {
+  margin: 8px;
+  box-shadow: 0 1px 10px #00000021 !important;
+  box-shadow: none !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  padding: 0;
+  cursor: pointer;
+}
+table {
+  width: 100%;
+}
+.chart {
+  min-width: 120%;
+  max-width: none !important;
+}
+
+.chartjs-render-monitor {
+  animation: chartjs-render-animation 0.001s;
+}
+.chart canvas {
+  margin-left: auto;
+  margin-right: auto;
+}
+.labels {
+  margin: 0;
+  padding: 20px 0 0;
+  display: flex;
+  display: inline;
+  margin: 1px 5px;
+  font-weight: 500;
+  font-size: 11px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+}
+.bullet-point {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #ff9800;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+
+
+}
+
+element.style {
+  display: block;
+  width: 456px;
+  height: 228px;
+  background-color: rgb(255, 103, 105);
+}
+
+ul {
+  font-weight: 500;
+  text-align: center;
+  font-size: 11px;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+li{
+  display: inline-block;
+  margin: 4px 10px;
+  font-weight: 500;
+
+}
+
+ul {
+  list-style-type: disc;
+  margin: 16px;
+  text-align: center;
+}
+.card-header {
+  padding: 5px 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+}
+.chart {
+  min-width: 130%;
+  max-width: none !important;
+}
+
+.card-content {
+  font-size: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.card-header {
+  padding: 5px 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+}
+
+.mat-card-content > :first-child,
+.mat-card > :first-child {
+  margin-top: 0;
+}
+
+.mat-color {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.request-status {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .chart {
+      flex: 25%;
+  }
+  .title.card-header {
+    margin-bottom: 16px;
+  }
+  .title{
+    font-size: 16px;
+  }
+}

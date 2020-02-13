@@ -1,0 +1,30 @@
+<mat-card class="mat-card">
+  <div class="title  card-header">Upcoming Tasks- Due Days Wise</div>
+  <div class="card-content">
+    <div class="chart">
+      <canvas
+        baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend"
+        [colors]="pieChartColors"
+      ></canvas>
+    </div>
+    <div class="lable">
+      <ul>
+        <li *ngFor="let item of pieChartLabels; let itemIndex = index">
+          <span
+            [ngStyle]="{
+              'background-color': pieChartColors[0].backgroundColor[itemIndex]
+            }"
+            class="bullet-point "
+          ></span>
+          <span>{{ item }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-card>

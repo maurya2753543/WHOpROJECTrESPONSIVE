@@ -1,0 +1,81 @@
+<mat-toolbar class="mat-toolbar mat-toolbar-multiple-row">
+  <mat-toolbar-row>
+    <!-- We are set the WHO logo for the Scen size Desktop. -->
+    <div class="logo">
+      <img src="assets/images/who-logo.png" alt="WHO Logo" />
+    </div>
+    <div class="header-title">Service tracking System</div>
+
+    <span class="spacer"></span>
+    <!--  We are set the Home button for the Scen size Desktop -->
+    <button class="nav-button" mat-button>
+      <mat-icon>home</mat-icon>
+      <span> Home </span>
+    </button>
+    <!--  We are set Service Request Button  for the Scen size Desktop -->
+
+    <button class="nav-button" mat-button>
+      <mat-icon arial-hidden="false" arial-label="Service Request">
+        <img
+          src="assets/images/service_request_icon.svg"
+          alt="Service Request"
+        />
+      </mat-icon>
+      <span> Service Request </span>
+    </button>
+
+    <!-- You will not be able to see this text. -->
+    <button class="notification-bar"  mat-icon-button>
+      <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+    </button>
+
+   <!--  We are set the Profile icon for the Scen size Desktop -->
+    <div class="profile-icon">
+      <img src="assets/images/user-profile-avatar.png" alt="Profile Image" />
+    </div>
+   <!--***********************************************************************-->
+
+    <!-- We are set the Manu For Mobile type Scren -->
+
+    <button  mat-icon-button color="primary" aria-label="Menu Button"   [matMenuTriggerFor]="menu" class="sidenav">
+      <mat-icon>menu_open</mat-icon>
+  </button>
+
+  <!-- we are set home icon the Mobile Size -->
+
+  <mat-menu #menu="matMenu"  >
+    <button mat-menu-item>
+      <mat-icon>home</mat-icon>
+      <span> Home </span>
+    </button>
+
+    <!-- We are set the Service Request for Screan size Mobile size   -->
+    <button mat-menu-item>
+      <mat-icon>
+        <img
+          src="assets/images/service_request_icon.svg"
+          alt="Service Request"
+          class="service-icon"
+        />
+      </mat-icon>
+      <span> Service Request </span>
+    </button>
+
+    <!-- We are set the notification bar for the Mobile type  -->
+    <button class="notification" mat-menu-item>
+      <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+      <span> Notification </span>
+    </button>
+
+    <!-- We are set the Profile icon for the Mobile size  -->
+    <button mat-menu-item class="profile">
+      <mat-icon>
+        <img src="assets/images/user-profile-avatar.png" alt="Profile Image"/>
+      </mat-icon>
+      <span> My Account </span>
+    </button>
+
+   </mat-menu>
+
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,76 @@
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+  color: #fff;
+  margin-right: 12px;
+  transition: all 0.3s;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.circle_green {
+  background: #4adab3;
+}
+
+.circle_blue {
+  background: #65a2f5;
+}
+
+.circle_yellow {
+  background: #fec519;
+}
+
+.circle_red {
+  background: #ff6769;
+}
+.text {
+  color: #272727;
+  font-size: 15px;
+}
+
+.mat-card {
+  margin: 10px 8px 1px;
+  display: flex;
+  box-shadow: none !important;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transition: all 0.3s;
+}
+
+.header-graphs {
+  background: #0095d2;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .info-row{
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .OngoingRequests, .taskDue, .apporching, .onHold{
+    flex: 50%;
+  }
+
+ }
+
+ @media screen and (max-width: 600px) {
+  .info-row{
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .OngoingRequests, .taskDue, .apporching, .onHold{
+    flex: 100%;
+  }
+
+ }
